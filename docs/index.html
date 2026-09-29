@@ -1,0 +1,75 @@
+---
+---
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build your own portfolio website / 自己搭建作品集网站</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; line-height: 1.65; }
+    body { max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem 5rem; color: #1b2530; background: #fff; }
+    header { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; border-bottom: 1px solid #d8e0e8; padding-bottom: 1rem; }
+    nav { display: flex; gap: .5rem; }
+    button { font: inherit; padding: .4rem .85rem; border: 1px solid #53677b; border-radius: .4rem; background: #fff; cursor: pointer; }
+    button[aria-pressed="true"] { background: #163451; color: #fff; }
+    a { color: #1559a2; }
+    h1, h2, h3 { line-height: 1.25; scroll-margin-top: 1rem; }
+    h1 { margin-top: 2rem; }
+    h2 { margin-top: 2.4rem; border-top: 1px solid #d8e0e8; padding-top: 1.2rem; }
+    code { background: #f2f5f8; padding: .1rem .25rem; }
+    pre { overflow-x: auto; padding: 1rem; background: #f2f5f8; }
+    pre code { padding: 0; }
+    table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+    th, td { border: 1px solid #d8e0e8; padding: .5rem; vertical-align: top; }
+    blockquote { margin-left: 0; padding-left: 1rem; border-left: 3px solid #8ca7be; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="https://github.com/ryanzhao/portfolio-website-starter">GitHub</a>
+    <nav aria-label="Language / 语言">
+      <button type="button" data-language="zh" aria-pressed="true">中文</button>
+      <button type="button" data-language="en" aria-pressed="false">English</button>
+    </nav>
+  </header>
+  <main>
+    <article id="zh" lang="zh-CN">
+      <h1>自己动手搭建作品集网站</h1>
+      <p>快速开始、完整时间线、平台、问题处理与 AI 工作流都在本页展开。</p>
+      <h2>快速开始</h2>
+      <p>需要 Node.js 24.14.x 和 npm。克隆仓库后，在仓库根目录执行：</p>
+      <pre><code>npm ci
+npm run dev</code></pre>
+      <p>打开 <code>http://127.0.0.1:3000</code>。完整安装、Cloudflare 与 Sanity 配置说明见<a href="https://github.com/ryanzhao/portfolio-website-starter/blob/main/README-OPEN-SOURCE.zh-CN.md">中文源码指南</a>。</p>
+      {% capture zh_journey %}{% include_relative WEBSITE-BUILD-JOURNEY-ZH.md %}{% endcapture %}
+      {{ zh_journey | markdownify }}
+    </article>
+    <article id="en" lang="en" hidden>
+      <h1>Build your own portfolio website</h1>
+      <p>The quick start, complete timeline, platforms, problems and solutions, and AI workflow are expanded below.</p>
+      <h2>Quick start</h2>
+      <p>Use Node.js 24.14.x and npm. After cloning the repository, run this at its root:</p>
+      <pre><code>npm ci
+npm run dev</code></pre>
+      <p>Open <code>http://127.0.0.1:3000</code>. See the <a href="https://github.com/ryanzhao/portfolio-website-starter/blob/main/README-OPEN-SOURCE.md">English source guide</a> for full setup and Cloudflare/Sanity configuration.</p>
+      {% capture en_journey %}{% include_relative WEBSITE-BUILD-JOURNEY-EN.md %}{% endcapture %}
+      {{ en_journey | markdownify }}
+    </article>
+  </main>
+  <script>
+    const sections = { zh: document.getElementById("zh"), en: document.getElementById("en") };
+    const buttons = document.querySelectorAll("[data-language]");
+    function showLanguage(language) {
+      const selected = language === "en" ? "en" : "zh";
+      for (const [key, section] of Object.entries(sections)) section.hidden = key !== selected;
+      for (const button of buttons) button.setAttribute("aria-pressed", String(button.dataset.language === selected));
+      document.documentElement.lang = selected;
+      history.replaceState(null, "", "?lang=" + selected);
+    }
+    for (const button of buttons) button.addEventListener("click", () => showLanguage(button.dataset.language));
+    showLanguage(new URLSearchParams(location.search).get("lang"));
+  </script>
+</body>
+</html>

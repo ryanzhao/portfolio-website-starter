@@ -1,7 +1,5 @@
 # Ryan Zhao Engineering Portfolio: The Website Build Journey
 
-**Language / 语言:** [简体中文](WEBSITE-BUILD-JOURNEY-ZH.md) · [English](WEBSITE-BUILD-JOURNEY-EN.md)
-
 > This account is based on the project’s Git history, `PLANS.md`, implementation and acceptance records in `docs/`, and local Codex rollout metadata. It is current through **September 28, 2026**. Dates and outcomes are included only where supported by project evidence. Design goals, deployed code, published content, and backup acceptance are treated as separate things. Original Codex session files remain local; this is not a verbatim conversation export.
 
 ## 1. How the project began
@@ -108,10 +106,6 @@ Codex can follow instructions to inspect and change code, analyze logs, run chec
 
 ## 8. Further reading in this repository
 
-- Project rules and authorization boundaries: [`AGENTS.md`](../AGENTS.md)
-- Dated implementation/deployment log: [`PLANS.md`](../PLANS.md)
 - Canva reference observations: [`DESIGN-REFERENCE.md`](DESIGN-REFERENCE.md)
 - Architecture boundaries: [`ARCHITECTURE.md`](ARCHITECTURE.md)
-- Admin and media processing: [`ADMIN.md`](ADMIN.md), [`LOCAL-PROCESSOR.md`](LOCAL-PROCESSOR.md), [`MEDIA.md`](MEDIA.md)
-- Designer and recovery acceptance: [`DESIGNER-ACCEPTANCE.md`](DESIGNER-ACCEPTANCE.md), [`ROLLBACK.md`](ROLLBACK.md)
 - Verification record: [`VERIFICATION.md`](VERIFICATION.md)

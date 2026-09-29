@@ -1,7 +1,5 @@
 # Ryan Zhao 工程作品集网站：从零到当前的建站记录
 
-**语言 / Language:** [简体中文](WEBSITE-BUILD-JOURNEY-ZH.md) · [English](WEBSITE-BUILD-JOURNEY-EN.md)
-
 > 本文依据项目 Git 提交、`PLANS.md`、`docs/` 中的实施/验收记录，以及本机 Codex rollout 会话元数据整理。它记录到 **2026-09-28**。日期与结果只在有仓库或会话证据时写入；设计目标、已部署代码、内容发布和备份验收分别描述。Codex 会话原件留在本机，本文不是会话逐字导出。
 
 ## 1. 项目从哪里开始
@@ -108,10 +106,6 @@ Codex 的作用是按指令读写代码、分析日志、运行检查，并在�
 
 ## 8. 项目内进一步阅读
 
-- 项目要求与授权边界：[`AGENTS.md`](../AGENTS.md)
-- 按日期的实施与部署日志：[`PLANS.md`](../PLANS.md)
 - Canva 参考观察：[`DESIGN-REFERENCE.md`](DESIGN-REFERENCE.md)
 - 架构边界：[`ARCHITECTURE.md`](ARCHITECTURE.md)
-- 后台与媒体处理：[`ADMIN.md`](ADMIN.md)、[`LOCAL-PROCESSOR.md`](LOCAL-PROCESSOR.md)、[`MEDIA.md`](MEDIA.md)
-- 设计器与恢复验收：[`DESIGNER-ACCEPTANCE.md`](DESIGNER-ACCEPTANCE.md)、[`ROLLBACK.md`](ROLLBACK.md)
 - 实际验证记录：[`VERIFICATION.md`](VERIFICATION.md)

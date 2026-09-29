@@ -106,6 +106,6 @@ Codex can follow instructions to inspect and change code, analyze logs, run chec
 
 ## 8. Further reading in this repository
 
-- Canva reference observations: [`DESIGN-REFERENCE.md`](DESIGN-REFERENCE.md)
-- Architecture boundaries: [`ARCHITECTURE.md`](ARCHITECTURE.md)
-- Verification record: [`VERIFICATION.md`](VERIFICATION.md)
+- Canva reference observations: [`DESIGN-REFERENCE.md`](https://github.com/ryanzhao/portfolio-website-starter/blob/main/docs/DESIGN-REFERENCE.md)
+- Architecture boundaries: [`ARCHITECTURE.md`](https://github.com/ryanzhao/portfolio-website-starter/blob/main/docs/ARCHITECTURE.md)
+- Verification record: [`VERIFICATION.md`](https://github.com/ryanzhao/portfolio-website-starter/blob/main/docs/VERIFICATION.md)

@@ -106,6 +106,6 @@ Codex 的作用是按指令读写代码、分析日志、运行检查，并在�
 
 ## 8. 项目内进一步阅读
 
-- Canva 参考观察：[`DESIGN-REFERENCE.md`](DESIGN-REFERENCE.md)
-- 架构边界：[`ARCHITECTURE.md`](ARCHITECTURE.md)
-- 实际验证记录：[`VERIFICATION.md`](VERIFICATION.md)
+- Canva 参考观察：[`DESIGN-REFERENCE.md`](https://github.com/ryanzhao/portfolio-website-starter/blob/main/docs/DESIGN-REFERENCE.md)
+- 架构边界：[`ARCHITECTURE.md`](https://github.com/ryanzhao/portfolio-website-starter/blob/main/docs/ARCHITECTURE.md)
+- 实际验证记录：[`VERIFICATION.md`](https://github.com/ryanzhao/portfolio-website-starter/blob/main/docs/VERIFICATION.md)

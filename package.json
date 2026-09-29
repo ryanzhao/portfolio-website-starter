@@ -1,0 +1,61 @@
+{
+  "name": "ryan-engineering-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24.14.1 <25"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "build:worker": "opennextjs-cloudflare build",
+    "preview": "opennextjs-cloudflare preview --ip 127.0.0.1 --port 8787",
+    "typecheck": "next typegen && tsc --noEmit",
+    "lint": "eslint .",
+    "test": "node --test tests/*.test.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@google/model-viewer": "4.3.1",
+    "@sanity/client": "8.6.2",
+    "aws4fetch": "1.0.20",
+    "file-type": "22.1.1",
+    "jose": "6.2.12",
+    "next": "16.3.5",
+    "next-sanity": "13.3.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sanity": "6.15.0",
+    "styled-components": "6.5.3"
+  },
+  "overrides": {
+    "@module-federation/dts-plugin": {
+      "adm-zip": "0.6.1"
+    },
+    "@vercel/frameworks": {
+      "js-yaml": "3.15.2",
+      "smol-toml": "1.7.1"
+    },
+    "typeid-js": {
+      "uuid": "11.1.1"
+    },
+    "rclone.js": {
+      "adm-zip": "0.6.1"
+    }
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260919.1",
+    "@opennextjs/cloudflare": "1.20.6",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.3.5",
+    "miniflare": "5.20260918.0-alpha",
+    "rclone.js": "0.6.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "~5.9.3",
+    "wrangler": "4.135.0"
+  }
+}

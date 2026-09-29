@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.next/
+.open-next/
+.wrangler/
+.env*
+!.env.example
+.dev.vars*
+*.tsbuildinfo
+artifacts/
+output/
+.playwright-cli/
+*.log
+coverage/
+.superpowers/
+
+# Owner-specific deployment and instruction files
+/wrangler.admin.jsonc
+/wrangler.portfolio.jsonc
+/AGENTS.md
+/PLANS.md
+
+# Original CAD files supplied by the owner
+*.step
+*.stp
+*.f3z
+
+# Local credential files
+/新建 文本文档.txt
+/新建 文本文档 (2).txt
+/新建 文本文档 (3).md

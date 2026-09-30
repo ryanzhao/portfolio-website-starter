@@ -1,6 +1,6 @@
 # Ryan Zhao Engineering Portfolio: The Website Build Journey
 
-> This account is based on the project’s Git history, `PLANS.md`, implementation and acceptance records in `docs/`, and local Codex rollout metadata. It is current through **September 28, 2026**. Dates and outcomes are included only where supported by project evidence. Design goals, deployed code, published content, and backup acceptance are treated as separate things. Original Codex session files remain local; this is not a verbatim conversation export.
+> This account is based on the project’s Git history, `PLANS.md`, implementation and acceptance records in `docs/`, and local Codex rollout metadata. It is current through **September 29, 2026**. Dates and outcomes are included only where supported by project evidence. Design goals, deployed code, published content, and backup acceptance are treated as separate things. Original Codex session files remain local; this is not a verbatim conversation export.
 
 ## 1. How the project began
 
@@ -61,6 +61,12 @@ With the owner’s authorization, the portfolio was deployed to a dedicated publ
 
 Deploying Worker code and publishing content are separate operations. Verified GLB and page publications are documented individually. On September 28, the homepage publication check found the existing hero and chemistry image blocks outside their desktop bounds. The owner chose to preserve the layout and defer publication, so the private draft remains unpublished and the public content was not described as updated. A video gallery was later added to the private draft and playback verified. The Machining slot remains empty because the Thruster video has not been confirmed as belonging to that project.
 
+### Stage G: Prepare and publish a separate open-source edition (September 29, 2026)
+
+The existing portfolio archive remained private. A separate public repository, `ryanzhao/portfolio-website-starter`, received a fresh root commit containing only a reviewed starter snapshot. The export removed private project instructions, deployment configurations, account-specific resource values, raw CAD and personal media, and local secrets. The public configuration uses placeholders. The starter includes source code, an MIT license, setup guides, and this bilingual build record. Lint, type checking, the Workers build, and targeted tests passed before the initial publication.
+
+The first Git HTTPS push failed because the local environment could not connect to GitHub on port 443. After the network permission was enabled, the push succeeded and the remote `main` commit was read back. GitHub Pages was then enabled from `main /docs` for an optional language-switching guide. GitHub's repository README does not run custom switching scripts, so the repository homepage now shows the complete English record directly and links to a complete Chinese Markdown version on GitHub. The Pages guide remains available for switching languages in place.
+
 ## 4. Problems encountered and how they were handled
 
 | Problem | Response | Reusable lesson |
@@ -73,6 +79,8 @@ Deploying Worker code and publishing content are separate operations. Verified G
 | Large STEP download truncated / Worker CPU limit | Download verified ranges on the PC; keep the Worker coordinating; allow preconverted GLB | Run large compute on the selected processing machine; preserve originals and report failures honestly. |
 | Multiple editor windows saved concurrently | Reread the latest revision and preserve the other editor’s changes on conflict | Never overwrite newer state with a stale draft; conflicts need an explicit recovery/retry path. |
 | Homepage content blocks exceeded layout bounds | Block that content publication and preserve the private draft and current public version | Publication checks cover content state, not only whether code builds. |
+| The local Git HTTPS connection to GitHub failed | Use the authorized network connection, retry the push, then read back the remote commit | Treat a failed push as unverified until the remote branch is confirmed. |
+| GitHub README could not switch text in place | Show the full English record on the repository homepage and link to a full Chinese Markdown page | Use separate Markdown pages for language choice inside GitHub; an optional Pages site can switch in place. |
 
 ## 5. Reusable AI workflow
 
@@ -102,7 +110,7 @@ Codex can follow instructions to inspect and change code, analyze logs, run chec
 - Public content and private drafts are different. The homepage layout overflow remains unresolved and its publication was deferred by the owner; do not move or publish it without a new request.
 - The local PC processor does not automatically sync to NAS/OneDrive. A full website backup/restore drill is not claimed as complete.
 - Cloudflare plans, CPU limits, storage quotas, billing, and deployed versions can change; verify them live before reuse.
-- The Git history available on September 28 shows staged development commits starting with a September 20 project snapshot. Earlier setup and September 19 work are supplemented by `PLANS.md`, design records, and local Codex session metadata. Git alone cannot reconstruct every step.
+- The private project's Git history available on September 28 shows staged development commits starting with a September 20 project snapshot. Earlier setup and September 19 work are supplemented by `PLANS.md`, design records, and local Codex session metadata. The public starter deliberately begins with a separate clean root commit. Neither history alone reconstructs every step.
 
 ## 8. Further reading in this repository
 
